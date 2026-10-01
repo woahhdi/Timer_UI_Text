@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class level1_Sky : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class level1_Sky : MonoBehaviour
             DisplayFeedback(correct);
             /*for aleeyah- maybe add a 5 second timer here? does not need to be displayed. i think it would just 
             look better to wait a little after feedback instead of immediatly moving to next level*/
-            // i can  add next level function after we put everything we need on level1 scene-sunday
+            
+            //SceneManager.LoadScene(1);// go to level 2
         }); 
     }
 
@@ -36,4 +38,6 @@ public class level1_Sky : MonoBehaviour
             feedback.text = "Incorrect!";
         }
     }
+    
+
 }
