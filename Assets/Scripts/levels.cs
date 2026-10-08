@@ -9,6 +9,8 @@ public class level1_Sky : MonoBehaviour
     public Button checkButton;
     public TMP_Text feedback;
     public TMP_Text timerText;
+    public string word;
+    public int nextScene;
     private float timeRemaining=32f;//2 extra seconds to look at feedback or times up
     private bool isGameActive = true;
 
@@ -22,7 +24,7 @@ public class level1_Sky : MonoBehaviour
     
         
         checkButton.onClick.AddListener(() => {// short hand;run function below onclick
-            correct= Check_Spelling.checkSpell("sky", input.text.Trim().ToLower());// using checkSpell from Check_Spelling file
+            correct= Check_Spelling.checkSpell(word, input.text.Trim().ToLower());// using checkSpell from Check_Spelling file
             Debug.Log("do words match? "+ correct);
             DisplayFeedback(correct);
             /*for aleeyah- maybe add a 5 second timer here? does not need to be displayed. i think it would just 
@@ -37,7 +39,7 @@ public class level1_Sky : MonoBehaviour
     {
         UpdateTimer();
         checkButton.onClick.AddListener(() => {// short hand;run function below onclick
-            correct = Check_Spelling.checkSpell("sky", input.text.Trim().ToLower());// using checkSpell from Check_Spelling file
+            correct = Check_Spelling.checkSpell(word, input.text.Trim().ToLower());// using checkSpell from Check_Spelling file
             Debug.Log("do words match? " + correct);
             DisplayFeedback(correct);
             /*for aleeyah- maybe add a 5 second timer here? does not need to be displayed. i think it would just 
@@ -78,7 +80,7 @@ public class level1_Sky : MonoBehaviour
 
         }else if (timeRemaining <= 1)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(nextScene);
         }
 
 
@@ -88,7 +90,7 @@ public class level1_Sky : MonoBehaviour
             Debug.Log("correct is true, pause: "+ pause);
             if (pause >= 2)// two sceond pause before moving to next level
             {
-                SceneManager.LoadScene(1);// go to level 2
+                SceneManager.LoadScene(nextScene);// go to level 2
             }
         }
 
