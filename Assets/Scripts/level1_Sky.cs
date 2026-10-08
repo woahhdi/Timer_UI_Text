@@ -65,16 +65,20 @@ public class level1_Sky : MonoBehaviour
     void UpdateTimer()
     {
    
-        if (timeRemaining > 0)
+        if (timeRemaining > 2)
         {
             timeRemaining -= Time.deltaTime;
             Debug.Log(timeRemaining);
             timerText.text = "Timer:" + (Mathf.CeilToInt(timeRemaining)-2);
-        }else if (timeRemaining>2)
+        }else if (timeRemaining<=2 && timeRemaining>1)
         {
-            Debug.Log("Time's up!");
+            timeRemaining -= Time.deltaTime;
+            Debug.Log("Time's up!: " + timeRemaining);
             timerText.text = "Time's Up!";
 
+        }else if (timeRemaining <= 1)
+        {
+            SceneManager.LoadScene(1);
         }
 
 
