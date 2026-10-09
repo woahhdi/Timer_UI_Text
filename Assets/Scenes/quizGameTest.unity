@@ -1261,6 +1261,10 @@ MonoBehaviour:
   input: {fileID: 965175776}
   checkButton: {fileID: 634141096}
   feedback: {fileID: 167359973}
+  timerText: {fileID: 0}
+  word: 
+  nextScene: 0
+  timeLimit: 32
 --- !u!4 &1140286228
 Transform:
   m_ObjectHideFlags: 0
