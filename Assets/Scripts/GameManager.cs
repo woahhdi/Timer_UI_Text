@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Loading Quiz: " + quizIndex);
 
-        if(quizDate == null || quizData.quizzes == null || quizData.quizzes.Length == 0)        //checking if quiz data and the quiz array are valid
+        if(quizData == null || quizData.quizzes == null || quizData.quizzes.Length == 0)        //checking if quiz data and the quiz array are valid
         {
             Debug.LogError("Quiz Data or quizzes is not set up correctly!");
             return;
