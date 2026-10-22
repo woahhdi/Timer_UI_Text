@@ -1806,7 +1806,7 @@ MonoBehaviour:
   feedback: {fileID: 167359973}
   timerText: {fileID: 2129602224}
   word: paradigm
-  nextScene: 3
+  nextScene: 4
   timeLimit: 32
 --- !u!4 &1776785356
 Transform:

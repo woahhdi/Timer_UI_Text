@@ -1393,7 +1393,7 @@ MonoBehaviour:
   feedback: {fileID: 167359973}
   timerText: {fileID: 2119089558}
   word: sky
-  nextScene: 1
+  nextScene: 2
   timeLimit: 30
 --- !u!4 &1140286228
 Transform:

@@ -1681,7 +1681,7 @@ MonoBehaviour:
   feedback: {fileID: 167359973}
   timerText: {fileID: 844819538}
   word: feather
-  nextScene: 2
+  nextScene: 3
   timeLimit: 32
 --- !u!4 &1321810811
 Transform:
