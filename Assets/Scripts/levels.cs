@@ -9,6 +9,7 @@ public class level1_Sky : MonoBehaviour
     public Button checkButton;
     public TMP_Text feedback;
     public TMP_Text timerText;
+    public TMP_Text displayWord;
     public string word;
     public int nextScene;
     private float timeRemaining=32f;//2 extra seconds to look at feedback or times up
@@ -27,12 +28,16 @@ public class level1_Sky : MonoBehaviour
             correct= Check_Spelling.checkSpell(word, input.text.Trim().ToLower());// using checkSpell from Check_Spelling file
             Debug.Log("do words match? "+ correct);
             DisplayFeedback(correct);
+            displayWord.text = word;
+            Debug.Log("display word: " + displayWord.text);
+
             /*for aleeyah- maybe add a 5 second timer here? does not need to be displayed. i think it would just 
             look better to wait a little after feedback instead of immediatly moving to next level*/
-            
+
             //SceneManager.LoadScene(1);// go to level 2
         }); 
     }
+    
 
     private void Update()
         
@@ -42,6 +47,9 @@ public class level1_Sky : MonoBehaviour
             correct = Check_Spelling.checkSpell(word, input.text.Trim().ToLower());// using checkSpell from Check_Spelling file
             Debug.Log("do words match? " + correct);
             DisplayFeedback(correct);
+            displayWord.text = word;
+            Debug.Log("display word: " + displayWord.text);
+
             /*for aleeyah- maybe add a 5 second timer here? does not need to be displayed. i think it would just 
             look better to wait a little after feedback instead of immediatly moving to next level*/
 
